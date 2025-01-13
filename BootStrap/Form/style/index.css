@@ -1,0 +1,32 @@
+/*Aqui estamos no CSS para centralizar nosso container e colcoar uma imagem de fundo*/
+* {
+  margin: 0;
+  padding: 0;
+}
+.bd {
+  background-image: url("../imagens/backgroundLp.png");
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container1 {
+  background-color: #131212f1;
+  width: 450px;
+  height: auto;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.38);
+  text-align: center;
+  color: #7b7474f1;
+  margin-top: 3px;
+  padding-top: 17px;
+  padding-bottom: 6px;
+}
+
+.btno {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 15px;
+  width: 120px;
+}
