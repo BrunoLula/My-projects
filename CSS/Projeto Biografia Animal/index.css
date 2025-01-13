@@ -1,0 +1,180 @@
+/*O primeiro passo aqui no nosso codigo CSS é zerar as definições de estilo padrão do navegador, setar ar fonts que importamos e definir qual o padrão de tamanho da box.*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oxygen", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+/*O segundo passo é definirmos algumas variaveis que receberam valores que usaremos diversas vezes ao longo do codigo.*/
+:root {
+  --color-background: #030207;
+  --color-white: #fff;
+  --color-blue: #1474b4;
+}
+
+/*Agora iremos estilizar os elementos genericos da nossa pagina (body e links)*/
+body {
+  background-color: var(--color-background);
+  color: var(--color-white);
+}
+
+a {
+  color: var(--color-blue);
+}
+
+/*Agora iremos estilizar a nossa section 'hero'*/
+.hero {
+  /*Primeiro passo iremos definir uma altura minina pra nossa section.
+A difereça de definir uma altura e uma altura minima é que só definir somente a altura significa que aquele elemento terá aquela altura sempre, já a altura minima é que ele pode ser maior mais o minimo de ltura será aquele definido.*/
+  min-height: 100vh;
+
+  /*Agora iremos colocar um position relative na nossa section que o o video terá um position absolute*/
+  position: relative;
+
+  /*Agora iremos colocar um background de linear que irá de uma cor muito pouca transparente até a cor que definimos de background.*/
+  background-color: transparent;
+}
+
+/*Agora iremos estilizar o nosso background da section hero que se trata do video.*/
+.hero__background {
+  /*Aqui iremos definir a largura e altura do video*/
+  width: 100%;
+  height: 100vh;
+
+  /*Aqui vamos definir o position que será absolute.*/
+  position: absolute;
+
+  /*Agora como o nosso video ficara de fundo iremos definir o z-index dele para que todo elemento que esteja sobrepondo ele fique por cima, e o nosso background sempre fique atrás de todos os elementos.*/
+  z-index: -10;
+
+  /*Agora vamos definir o ajuste do nosso video atraves do object-fit que se comporta igual a um background-size.*/
+  object-fit: cover;
+
+  /*E por ultimo como esse background vai ficar no começo da tela vou definir o 'top' propriedade que usamos junto com o position para posicionar melhor um elemtento*/
+  top: 0;
+}
+
+/*Agora iremos estilizar o nosso foreground*/
+.hero__foreground {
+  /*Aqui vamos centralizar o texto, colocar uma margin no topo e mudar a cor da fonte*/
+  text-align: center;
+  margin-top: 40vh;
+  color: var(--color-white);
+}
+
+/*Agora vamos estilizar o h1 e o paragrafo da nossa section hero.*/
+.hero__title {
+  font-size: 5rem;
+  font-weight: 300;
+}
+
+.hero__text {
+  /*Aqui vamos estilizar o paragrafo colocando ele em uppercase,definindo uma separação nas letras e colocando um margin no topo*/
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  margin: 2rem auto;
+}
+
+/*Agora iremos estilizar a nossa section, centralizando as frases, mundando seu estilo e aplicando um overflow para escondet os elementos que ultrapassem os limites dela*/
+.section {
+  text-align: center;
+  overflow: hidden;
+}
+
+/*Agora vou estilizar os titles da section*/
+.section__title {
+  margin: 4rem auto;
+  letter-spacing: 0.8rem;
+  font-weight: 300;
+}
+
+/*Agora irei estilizar todos os textos da nossa section, aumetando a altura das linhas.*/
+.section__text,
+.section__text-inline {
+  font-size: 0.8rem;
+  line-height: 1.75rem;
+  padding: 2.5rem;
+}
+
+/*Aqui irei estilizar as imagens, como essa vai ser uma primeira edição padrão irei juntar as duas class que representam as imagens, um da largura da imagem, outra estou colocando uma sombra na imagem atraves do 'box-shadow' e um aredondamento atraves do border-radius. Tambem estou mexendo no psocionamento das imagens atraves das propriedades 'position', 'object-fit' e 'object-position', tambem estou definindo uma altura maxina de 30rem para essas imagens.*/
+.section__img,
+.section__img-inline {
+  width: 100%;
+  box-shadow: 0 1rem 1rem rgba(20, 116, 180, 0.25);
+  border-radius: 2rem;
+  object-fit: cover;
+  object-position: top;
+  position: relative;
+  max-height: 30rem;
+}
+
+/*Aqui estamos trabalhando as imagens que ficam ao lado dos textos, por isso estamos usando a propriedade float, estamos tambem definindo altura e larguxa fixas e aplicando aluns arredondamentos de bordas com o border radius.*/
+.section__img-inline {
+  float: left;
+  width: 20rem;
+  height: 20rem;
+  object-position: center;
+  margin: 0.8rem 2rem;
+  border-top-right-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+}
+
+/*Aqui estamos trabalhando nos textos da nossa section, estilizando eles pra se distanciar um pouco das imagens acima deles*/
+.section__text-inline {
+  margin-top: 2rem;
+  text-align: left;
+  line-height: 2.5rem;
+  padding: 3rem;
+}
+
+/*Aqui atraves do ID estamos trabalhando exclusivamente na imagem da abaixo, e estamos mostrando somente o centro dela atraves da propriedade object-position.*/
+#Hangouts {
+  object-position: center;
+}
+
+/*Agora vamos trabalhar nas imagens da section "gallery" que vão ficar uma ao lado da outra, por isso vamos definir alturas e larguras fixas pra elas, e seguindo o exemplo das outras imagens vamos arredondar suas bordas.*/
+.gallery__img {
+  height: 18rem;
+  width: 18rem;
+  border-radius: 1.5rem;
+  margin-right: 1.5rem;
+  transform: rotate(-2deg);
+}
+
+/*Agora atraves dos seletores que aprendemos em aulas anteriores vamos girar as imagens impares em 2graus positivos e as pares em -2graus*/
+.gallery__img-wrapper:nth-child(even) > .gallery__img {
+  transform: rotate(2deg);
+}
+
+.gallery__img-wrapper {
+  position: relative;
+}
+
+/*Agora iremos usar o seletor '::after' para criar bolinahs vermelhas no topo das fotos passando a ideia que elas estão presas. Pra isso usamos o content vazio. O position como absolute pra assim podermos posicionar ele manualmente, e com o border radius arendondamos esse elemento.*/
+.gallery__img-wrapper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background-color: red;
+  top: -16rem;
+  right: 3rem;
+  border-radius: 99rem;
+}
+
+/*Agora irei pegar somente os pares igual anteriormente no codigo e colcoarei a bolinha no lado esquerdo*/
+.gallery__img-wrapper:nth-child(even)::after {
+  left: 1.5rem;
+}
+
+/*Agora iremos estilizar o rodapé, pra isso vamos dar um margin do topo, centralizar o texto e colocar um pouco de padding.*/
+footer {
+  text-align: center;
+  padding: 3rem;
+  margin-top: 4.5rem;
+  border-top: 1px solid var(--color-white);
+}
