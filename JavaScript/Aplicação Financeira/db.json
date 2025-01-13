@@ -1,0 +1,24 @@
+{
+  "Moviments":[
+  {
+    "id":  1,
+  "name": "bruno",
+  "valor": 50,
+  "date": "08/06/2023"
+  },
+
+  {
+    "id": 2,
+  "name": "bruno",
+  "valor": 20,
+  "date": "22/10/2023"
+  },
+
+  {
+    "id": 3,
+  "name": "bruno",
+  "valor": 90,
+  "date": "12/12/2023"
+  }
+]
+}

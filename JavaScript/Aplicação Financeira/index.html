@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio Final - 27</title>
+  </head>
+  <body>
+    <!--Nesse exercicio final vamos criar uma apliação de movimentação bancaria-->
+    <body>
+      <h1>Exercicio Final - Aplicação financeira</h1>
+      <p>
+        Na aula de hoje vamos desenvolver um exercicio sobre uma aplicação
+        financeira. Onde devemos ter 2 espaços na nossa tela um reservado a um
+        formulario para a realização de uma nova aplicação e do lado um espaço
+        mostrando todas as movimentações já feitas, alem de mostrar o saldo
+        total da conta que deve se atualizar a cada movimentação feita
+      </p>
+      <hr />
+      <main>
+        <h2>Bem vindo a sua conta</h2>
+
+        <!--Nessa section iremos criar o formulario para crição de novas movimentações da conta:
+  Perceba que cada elemento input acompanha um id para conseguirmos trabalhar com o mesmo na parte do JS-->
+        <section>
+          <h3>Nova Movimentação</h3>
+          <p>
+            <strong
+              >Preencha os dados abaixo para realizar uma nossa movimentação em
+              sua conta:</strong
+            >
+          </p>
+          <forms id="forms">
+            <label for="name"> Digite o seu nome:</label>
+            <input type="text" id="name" name="name" />
+
+            <label for="value"> Digite o valor:</label>
+            <input type="number" id="value" name="value" />
+
+            <label for="date"> Informe a data:</label>
+            <input type="date" id="date" name="date" />
+
+            <button>Realizar Movimentação</button>
+          </forms>
+          <!--Aqui FORA do forms iremos colocar mais dois botoes:
+          Um para a ATUALIZACÃO de informações atraves da requisição PUT.
+          Um para a EXCLUSÃO de movimentações atraves da requisição DELETE-->
+          <button id="putButton">Atualizar Movimentação</button>
+          <button id="deleteButton">Remover Movimentação</button>
+        </section>
+
+        <section id="minhasMovimentacoes">
+          <!--Aqui é onde ficará todas as movimentações feitas, está vazia na hora da sua criação pois iremos criar os
+  elementos pelo JS-->
+        </section>
+      </main>
+    </body>
+    <script src="index.js"></script>
+  </body>
+</html>
