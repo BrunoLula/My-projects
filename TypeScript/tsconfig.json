@@ -1,0 +1,9 @@
+{
+//Aqui no arquivo de config do TS eu irei abrir o OBJECT de configuração e setar duas propriedades:
+"compilerOptions": {
+  /*A primeira propriedade que iremos setar é a 'outDir' onde nela eu passo o nome do DIRETORIO
+  que eu quero q o arquivo compilado seja gerado, nesse exmplo vou dar o nome do diretorio de 'dist'*/
+  "outDir": "dist",
+
+}
+}
