@@ -1,0 +1,163 @@
+
+.container00{
+  &.first-image-human{
+    background-image: url('../../images/humanFlight/01.jpg');
+  }
+
+  &.second-image-human{
+    background-image: url('../../images/humanFlight/02.jpg');
+  }
+
+  &.thirt-image-human{
+    background-image: url('../../images/humanFlight/03.jpg');
+  }
+
+  &.fourth-image-human{
+    background-image: url('../../images/humanFlight/04.jpg');
+  }
+
+  &.fifth-image-human{
+    background-image: url('../../images/humanFlight/05.jpg');
+  }
+}
+
+.container01Content {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 120px;
+  }
+
+  p {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 30px;
+    font-weight: 300;
+  }
+
+}
+
+.earthDesc {
+  background-color: black;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.earthParag {
+  color: $color-item-table;
+  font-weight: 400;
+  font-size: 20px;
+  width: 800px;
+}
+
+.earthLink {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+
+.containerRightContent {
+  margin-left: 55%;
+  padding-top: 15%;
+}
+
+.containerLeftContent {
+  margin-left: 5%;
+  padding-top: 15%;
+}
+
+.cardTitle {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.cardText {
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+//media query
+@media (max-width: 1024px) {
+  .container01Content {
+    h1 {
+      font-size: 90px;
+    }
+
+    p {
+      margin: 20px 0px;
+      font-size: 30px;
+      font-weight: 300;
+    }
+  }
+
+  .containerRightContent {
+    margin-left: 50%;
+    padding-top: 20%;
+  }
+
+  .cardTitle {
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  .cardText {
+    font-weight: 300;
+    margin-bottom: 40px;
+  }
+
+  .containerLeftContent {
+    margin-left: 5%;
+    padding-top: 20%;
+  }
+}
+
+@media (max-width: 425px) {
+  .container01Content {
+    h1 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .earthDesc {
+    height: 30vh;
+    p {
+      color: $color-item-table;
+      font-weight: 400;
+      font-size: 14px;
+      width: auto;
+    }
+  }
+
+  .containerRightContent {
+    margin-left: 20%;
+    padding-top: 30%;
+  }
+
+  .cardTitle {
+    font-size: 50px;
+    font-weight: bold;
+  }
+
+  .cardText {
+    font-weight: 300;
+    margin-bottom: 40px;
+  }
+
+  .containerLeftContent {
+    margin-left: 7%;
+    padding-top: 30%;
+  }
+}
