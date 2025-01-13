@@ -1,0 +1,139 @@
+/*Aqui estou zerando o margin e padding de toda a pagina e tambem setando o box-sizing*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*Aqui estou criando as variaveis que estao recebendo as cores que usarei na pagina*/
+:root {
+  --bg-color: #212529;
+  --border-color: #666;
+  --font-color: #f1f5f9;
+  --primary-color: #4dff91;
+  --error-color: #ff0043;
+}
+
+/*Aqui estou aplicando as variaveis feitas nos seus respectivos atributos e tambem setando a font da pagina*/
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  font-family: "Ubuntu", sans-serif;
+}
+
+/*Aqui estou estilizando o main determinando o seu margin, largura maxima, display e o seu position*/
+main {
+  display: block;
+  margin: 0 auto;
+  max-width: 40rem;
+  padding: 0 1.5rem 2.5rem;
+  position: relative;
+}
+
+/*Aqui estou estilizando a tag header*/
+header {
+  padding: 2rem 0;
+}
+
+/*Aqui estou estilizando o elemento que receber o id 'themeSwitcher' mudando suas propriedades de cores*/
+#themeSwitcher {
+  background-color: var(--bg-color);
+  border: 0.125rem solid var(--font-color);
+  color: var(--font-color);
+}
+
+/*Aqui estou estilizando o momento em que o usuario passar com o mouse emcima (hover) do elemento que tenha o id 'themeSwitcher' mudando suas propriedades de cores*/
+#themeSwitcher:hover {
+  background-color: var(--font-color);
+  color: var(--bg-color);
+}
+
+/*Aqui estou estilizando todos os meus buttons alterando cores, tamanho,font e o transition*/
+button {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  transition: 0.15s;
+}
+
+/*Aqui estou estilizando todos os meus inputs, alterando cor, tamanho, bordas, texto e display*/
+input {
+  background-color: var(--bg-color);
+  border: 2px solid var(--border-color);
+  border-radius: 0.5rem;
+  color: var(--font-color);
+  display: block;
+  font-size: 1.75rem;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: end;
+  width: 100%;
+}
+
+/*Aqui estou estilizando a div com id 'keys' colocando um display grid para organizacao dos elementos dentro dela, tambem setando o tamanho do gap entre eles, assim como definindo suas colunas*/
+#keys {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+/*Aqui estou estilizando todos os buttons dentro da div com id 'keys', mudando sua cor, alterando font e padding e setando que o mouse ao clicar no elemento tera o comportamento de pointer*/
+#keys button {
+  color: var(--bg-color);
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+/*Aqui estou setando o estilo de quando o mouse passar por cima (hover) dos buttons que estao dentro da DIV com id 'keys'*/
+#keys button:hover {
+  filter: brightness(0.8);
+}
+
+/*Aqui estou estilizando o input que tem o id 'result'*/
+#result {
+  border-width: 2px 2px 2px 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+/*Aqui estou estilizando o button que tem o id 'copyToClipboard', setando sua cor, tamanho, display, border, e o comprotamento do mouse nele*/
+#copyToClipboard {
+  background-color: transparent;
+  border: solid var(--border-color);
+  border-width: 2px;
+  border-radius: 0.5rem 0 0 0.5rem;
+  color: var(--font-color);
+  cursor: pointer;
+  display: block;
+  height: 4.25rem;
+  width: 6rem;
+}
+
+/*Aqui estou estilizando os elementos que contem a class 'flex' que no caso sao o header e a section*/
+.flex {
+  display: flex;
+}
+
+/*Aqui estou estilizando os elementos que contem a class 'align-center' que no caso sao o header e a section*/
+.align-center {
+  align-items: center;
+}
+
+/*Aqui estou estilizando os elementos que contem a class 'justify-between' que no caso sao o header e a section*/
+.justify-between {
+  justify-content: space-between;
+}
+
+/*Aqui estou estilizando os elementos que contem a class 'error'*/
+.error {
+  background-color: var(--error-color);
+}
+
+/*Aqui estou estilizando os elementos que contem a class 'sucess'*/
+.success {
+  border-color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
+}

@@ -1,0 +1,64 @@
+<!--Nessa aula vamos realizar um projeto pratico, portanto tera muitos comentarios explicando cada parte do CODIGO,PRESTAR MUITA ATENCAO nos comentarios e no desenrolar do codigo.-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Aqui estou importando fontes para a nossa pagina-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Projeto Prático Calculadora</title>
+    <!--Aqui importando os codigod de estilo(CSS) e JS-->
+    <link rel="stylesheet" href="style.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <!--Aqui estou colocando o atributo 'data' para armezenar a informacao de qual tema essa minha pagina ira comecar-->
+    <main data-theme="dark">
+      <!--Aqui o header da minha pagina com um titulo e um button que sera responsavel pela troca do tema da pagina-->
+      <header class="flex align-center justify-between">
+        <h1>Calc.js</h1>
+        <button id="themeSwitcher">Switch Theme Dark/Light</button>
+      </header>
+
+      <!--Aqui estou colocando um input onde o usuario ira digitar os numeros que deseja realizar a operacao na calculadora-->
+      <input type="text" id="input" />
+
+      <!--Aqui estou criando uma div com todos os buttons dessa calculadora, cada um esta recebendo o mesmo atributo de data porem obviamente cada button tem um valor diferente, todos tambem estao recebendo a mesma class
+      Menos o button do '=' que esta recebendo um id-->
+      <div id="keys">
+        <button id="clear">C</button>
+        <button class="charKey" data-value=" ( ">(</button>
+        <button class="charKey" data-value=" ) ">)</button>
+        <button class="charKey" data-value=" / ">/</button>
+        <button class="charKey" data-value="7">7</button>
+        <button class="charKey" data-value="8">8</button>
+        <button class="charKey" data-value="9">9</button>
+        <button class="charKey" data-value=" * ">*</button>
+        <button class="charKey" data-value="4">4</button>
+        <button class="charKey" data-value="5">5</button>
+        <button class="charKey" data-value="6">6</button>
+        <button class="charKey" data-value=" - ">-</button>
+        <button class="charKey" data-value="1">1</button>
+        <button class="charKey" data-value="2">2</button>
+        <button class="charKey" data-value="3">3</button>
+        <button class="charKey" data-value=" + ">+</button>
+        <button class="charKey" data-value="0">0</button>
+        <button class="charKey" data-value=".">.</button>
+        <button class="charKey" data-value=" % ">mod</button>
+        <button id="equal">=</button>
+      </div>
+
+      <!--Aqui estou criando uma section com um input onde sera mostrado o resultado, onde ele tem os atributos id e o seu type. ao carregar a pagina ele estara desabilitado, essa section tambem tera um button para se o usuario quiser copiar o resultado.-->
+      <section class="flex align-center justify-between">
+        <button id="copyToClipboard">Copy</button>
+        <input type="text" id="result" disabled />
+      </section>
+    </main>
+  </body>
+</html>
