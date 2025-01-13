@@ -1,0 +1,85 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+    <head>
+        <title> pagina de exemplo estrutura basica </title>
+        <meta charset="utf-8">
+        <meta name="author" content="Daniel">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+        <style>
+            /*Aqui nesse exercicio eu estaei utilizando as propriedade display grid:
+              Onde com essa propriedade eu consigo criar uma grid passando inicialmente dois parametro:
+              grid-template-columns onde com ele eu estou criando 4 colunas cada uma com 75px.
+              grid-template-rows onde com ele eu estou criando 5 linhas cada uma com 45px.
+              grid-gap onde com ele estou criando uma gap de 10px entre cada linha e coluna.*/
+            .calculadora{
+                width:340px;
+                display: grid;
+                grid-template-columns: repeat(4,75px);
+                grid-template-rows: auto repeat(5,45px);
+                grid-gap: 10px;
+                background-image: linear-gradient(#b7b7b7,#9c9c9c);
+                border-radius: 7px;
+                padding: 20px;
+                margin: 10px auto;
+            }
+            /*Onde aqui eu estou colocando que o meu display vai da 1 coluna até a ultima (-1)*/
+            .display{
+                grid-column: 1/-1;
+                text-align: right;
+                padding: 10px;
+                background-image: linear-gradient(#c5c5c5,#e0e0e0);
+                margin-bottom: 15px;
+
+            }
+
+            /*E abaixo nas minhas demais classes eu estou colocando onde cada uma será posicionada 
+              passando onde começa / onde termina cada classe*/
+            .AC{
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+
+            .por{
+                grid-column: 2/3;
+                grid-row: 2/3;
+            }
+
+            .mais{
+                grid-column: 4/5;
+                grid-row: 5/7;
+                background: #ccc;
+                border: none;
+            }
+
+            .mais:hover{
+                border: 1px solid white;
+            }
+
+            .zero{
+                grid-column: 1/3;
+               background: #ccc;
+               border: none;
+            }
+
+            .zero:hover{
+                border: 1px solid white;
+            }
+
+
+
+
+        </style>
+    </head>
+    <body>
+    <div class="calculadora">
+    <div class="display">0</div>
+    <button class="AC">AC</button><button class="por">%</button><button class="x">X</button><button class="barra">/</button>
+    <button class="sete">7</button><button class="oito">8</button><button class="nove">9</button><button class="igual">=</button>
+    <button class="quatro">4</button><button class="cinco">5</button><button class="seis">6</button><button class="menos">-</button>
+    <button class="tres">3</button><button class="dois">2</button><button class="um">1</button><button class="mais">+</button>
+    <button class="zero">0</button><button class="virgula">,</button>
+    </div>
+    </body>
+        
