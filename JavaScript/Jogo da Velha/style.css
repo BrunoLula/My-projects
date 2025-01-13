@@ -1,0 +1,38 @@
+body {
+  font-family: sans-serif;
+}
+
+#game-screen {
+  /*Aqui iremos comecar a 'criar' o nosso tabuleiro do jogo da velha:
+  Primeiro iremos colocar uma cor de fundo no tabuleiro*/
+  background-color: #232323;
+
+  /*Depois iremos colocar um display grid para 'montar' o tabuleiro*/
+  display: grid;
+
+  /*  Apos isso iremos setar o tamanho das linhas e das colunas com as propriedades grid-template-rows e grid-template-coluns, e como os tabulheiro tem 3 linhas e 3 colunas temos que setar o tamanho de cada espaco, mesmo que sejam iguais*/
+  grid-template-columns: 6rem 6rem 6rem;
+  grid-template-rows: 6rem 6rem 6rem;
+
+  /*Agora irei definirum gap entre cada elemento dessa grid, assim como uma margin para baixo*/
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  max-width: 19rem;
+}
+
+/*Agora iremos editar os spans que estao dentro da nossa section com id 'game-screen'*/
+#game-screen span {
+  /*LEMBRANDO NOVAMENTE QUE AQUI ESTILIZAMOS A 'SPAN' DENTRO DA SECTION:
+  Aqui vamos setar uma cor de fundo assim como o cursor do mouse e o display*/
+  background-color: #ddd;
+  cursor: pointer;
+  display: grid;
+  /*Aqui utilizaremos a propriedade place-content, porque com ela estamos dizendo que o conteudo dessa span sera colocado no center, e logo em seguiad setaremos o tamanho da font*/
+  place-content: center;
+  font-size: 5rem;
+}
+
+/*Agora iremos editar os spans que estao dentro da nossa section com id 'game-screen' e que receberao a class 'win', pois com isso eu ja edito os lugares que receberao a class ein quando um dos jogadores ganharem*/
+#game-screen span.win {
+  background-color: #13b516;
+}

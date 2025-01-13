@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body id="body">
+    <header>
+      <h1>Projeto Pratico - Jogo da velha</h1>
+      <p>
+        Na aula de hoje vamos fazer um projeto onde desenvolvemos um jogo da
+        velha, esse projeto integrará ensinamentos de HTML,CSS e JS. O exercicio
+        será seguido por diversos comentarios para explicação do codigo.
+      </p>
+      <hr />
+      <!--Aqui criarei os 2 inputs para os jogadores colocarem seus respectivos nomes-->
+      <label for="player1">X :</label>
+      <input
+        type="text"
+        placeholder="  Digite o nome do jogador 1"
+        id="player1"
+        name="player1"
+      />
+      <label for="player2">O :</label>
+      <input
+        type="text"
+        placeholder="  Digite o nome do jogador 2"
+        id="player2"
+        name="player2"
+      />
+      <!--Aqui irei colocar um button tanto para comecar como para recomecar o jogo-->
+      <button type="button" id="start-game">Comece o jogo</button>
+
+      <!--Aqui estou colocando um titulo para informar de quem e a vez de jogar, e irei inserir o nome do jogador com a tag span que foi aberta.-->
+      <h2>Vez De : <span id="turnPlayer"></span></h2>
+    </header>
+    <!--Aqui irei criar uma section onde ficara o nosso tabuleiro:
+    Essa div tera 9 spans onde cada um deles ira representar um espaco do tabuleiro, e cada span recebera um atributo data com o valor de sua regiao sendo referenciada em 2 numeros, sendo o 1 o numero da linha e o 2 o numero da coluna.-->
+    <section id="game-screen">
+      <span data-region="0.0"></span>
+      <span data-region="0.1"></span>
+      <span data-region="0.2"></span>
+      <span data-region="1.0"></span>
+      <span data-region="1.1"></span>
+      <span data-region="1.2"></span>
+      <span data-region="2.0"></span>
+      <span data-region="2.1"></span>
+      <span data-region="2.2"></span>
+    </section>
+  </body>
+</html>
